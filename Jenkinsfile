@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    oc login --token=sha256~EOQyEl_nSXHPwHWyFZpbEYvuG2Lef01Hs3himYpbs9o --server=https://api.natwest.priartw.com:6443--insecure-skip-tls-verify
+                    oc login --token=sha256~EOQyEl_nSXHPwHWyFZpbEYvuG2Lef01Hs3himYpbs9o --server=https://api.natwest.priartw.com:6443 --insecure-skip-tls-verify
                     oc project ${namespace}
                     oc start-build hello2
                     '''
